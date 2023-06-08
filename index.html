@@ -22,9 +22,10 @@
     <title>360F - BV</title>
 
     <!-- <script type="text/javascript" src="./dist/widget-happy-score-1.0.1.min.js"> </script> -->
-    <script
-      src="./dist/widget-benefit-visualizer-latest.min.js"
-      type="text/javascript"
+   <script
+      async
+      type="application/javascript"
+      src="https://360f.blob.core.windows.net/360f-widgets/benefit-visualizer/latest.min.js"
     ></script>
     <script>
       var configAUW = {
@@ -1015,7 +1016,13 @@
       };
 
       async function handleClick() {
-        const bvService = new BV360F.BenefitVisualizerWidget();
+        const bvService = new BV360F.BenefitVisualizerWidget({
+          code: 'AUWPBV01',
+          version: '1',
+          id: '6a1001a6-52e0-4737-8107-e9b57d4281ce',
+          tenantId: 'f3fcf9f4-4283-4f44-ac52-4b276817f9ee',
+          subscriptionKey: '4ad9c11a19324f4a8a0b7e8ae199bf46',
+        });
         let dataType = document.getElementsByName("data");
         let product = document.getElementsByName("product");
         let selectedDataType;
@@ -1059,44 +1066,27 @@
           let config = {};
           switch (selectedProduct) {
             case "AUW":
-              data = await bvService.getBenefitVisualizer({
-                endpoint:
-                  "https://api-sandbox.360f.com/benefit-visualizer-backend/api/v1/calculate-bi-data?subscription-key=4ad9c11a19324f4a8a0b7e8ae199bf46",
-                headers: {
-                  "X-TENANT-ID": "f3fcf9f4-4283-4f44-ac52-4b276817f9ee",
-                  "Content-Type": "application/json",
-                  accept: "application/json",
-                },
-                body: {
-                  base: {
-                    Gender: "Female",
-                    CalculationMethod: "SumAssuredToPremium",
-                    AgeAtFinancialGoal: 55,
-                    PlanVersion_rider: "FirstDollar",
-                    SumAssured: 350000,
-                    Premium: 6000,
-                    PremiumPaymentTerm: 20,
-                    Frequency: "Monthly",
-                    CriticalIllness_rider: "Yes",
-                    PlanType_rider: "Plan3",
-                    Age: 33,
-                  },
-                  productCode: "AUWPBV01",
-                  productVersion: "1",
-                  productId: "6a1001a6-52e0-4737-8107-e9b57d4281ce",
-                },
-              });
-              config = await bvService.getChartConfiguration({
-                endpoint:
-                  "https://api-sandbox.360f.com/benefit-visualizer-backend/api/v1/configs?subscription-key=4ad9c11a19324f4a8a0b7e8ae199bf46",
-                headers: {
-                  "X-TENANT-ID": "f3fcf9f4-4283-4f44-ac52-4b276817f9ee",
-                },
-                params: {
-                  productCode: "AUWPBV01",
-                  productVersion: "1",
-                },
-              });
+              data =  await bvService.getBenefitVisualizer({
+          endpoint:
+            'https://api-sandbox.360f.com/benefit-visualizer-backend/api/v1/calculate-bi-data',
+          payload: {
+            Gender: 'Female',
+            CalculationMethod: 'SumAssuredToPremium',
+            AgeAtFinancialGoal: 55,
+            PlanVersion_rider: 'FirstDollar',
+            SumAssured: 350000,
+            Premium: 6000,
+            PremiumPaymentTerm: 20,
+            Frequency: 'Monthly',
+            CriticalIllness_rider: 'Yes',
+            PlanType_rider: 'Plan3',
+            Age: 33,
+          },
+        });
+              config =await bvService.getChartConfiguration({
+          endpoint:
+            'https://api-sandbox.360f.com/benefit-visualizer-backend/api/v1/configs',
+        });
               break;
 
             default:
