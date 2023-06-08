@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8" />
+
+    <!-- Make the page mobile compatible -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, scalable=no"
+    />
+
+    <!-- Allow installing the app to the homescreen -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Open Sans Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>360F - BV</title>
+
+    <!-- <script type="text/javascript" src="./dist/widget-happy-score-1.0.1.min.js"> </script> -->
+    <script
+      src="./dist/widget-benefit-visualizer-latest.min.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      var configAUW = {
+        xAxis: [
+          {
+            table: "DeathBenefit",
+            attribute: "Age",
+            displayName: "Age",
+          },
+        ],
+        categories: [
+          {
+            name: "Low",
+            scenarios: [
+              {
+                name: "4%",
+                yAxis: [
+                  {
+                    table: "DeathBenefit",
+                    attribute: "FundValue_4pc",
+                    displayName: "Fund",
+                  },
+                  {
+                    table: "DeathBenefit",
+                    attribute: "DeathBenefit_4pc",
+                    displayName: "Death",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        hasScenario: true,
+      };
+
+      var dataAUW = {
+        productId: "AUWPBV01",
+        productVersion: "1",
+        tables: {
+          DeathBenefit: {
+            size: 22,
+            projections: [
+              {
+                name: "Year",
+                values: [
+                  {
+                    value: "1",
+                  },
+                  {
+                    value: "2",
+                  },
+                  {
+                    value: "3",
+                  },
+                  {
+                    value: "4",
+                  },
+                  {
+                    value: "5",
+                  },
+                  {
+                    value: "6",
+                  },
+                  {
+                    value: "7",
+                  },
+                  {
+                    value: "8",
+                  },
+                  {
+                    value: "9",
+                  },
+                  {
+                    value: "10",
+                  },
+                  {
+                    value: "15",
+                  },
+                  {
+                    value: "20",
+                  },
+                  {
+                    value: "25",
+                  },
+                  {
+                    value: "30",
+                  },
+                  {
+                    value: "35",
+                  },
+                  {
+                    value: "40",
+                  },
+                  {
+                    value: "45",
+                  },
+                  {
+                    value: "50",
+                  },
+                  {
+                    value: "55",
+                  },
+                  {
+                    value: "60",
+                  },
+                  {
+                    value: "65",
+                  },
+                  {
+                    value: "66",
+                  },
+                ],
+              },
+              {
+                name: "Age",
+                values: [
+                  {
+                    value: "34",
+                  },
+                  {
+                    value: "35",
+                  },
+                  {
+                    value: "36",
+                  },
+                  {
+                    value: "37",
+                  },
+                  {
+                    value: "38",
+                  },
+                  {
+                    value: "39",
+                  },
+                  {
+                    value: "40",
+                  },
+                  {
+                    value: "41",
+                  },
+                  {
+                    value: "42",
+                  },
+                  {
+                    value: "43",
+                  },
+                  {
+                    value: "48",
+                  },
+                  {
+                    value: "53",
+                  },
+                  {
+                    value: "58",
+                  },
+                  {
+                    value: "63",
+                  },
+                  {
+                    value: "68",
+                  },
+                  {
+                    value: "73",
+                  },
+                  {
+                    value: "78",
+                  },
+                  {
+                    value: "83",
+                  },
+                  {
+                    value: "88",
+                  },
+                  {
+                    value: "93",
+                  },
+                  {
+                    value: "98",
+                  },
+                  {
+                    value: "99",
+                  },
+                ],
+              },
+              {
+                name: "TotalPremium",
+                values: [
+                  {
+                    value: "7,896",
+                  },
+                  {
+                    value: "15,792",
+                  },
+                  {
+                    value: "23,687",
+                  },
+                  {
+                    value: "31,583",
+                  },
+                  {
+                    value: "39,479",
+                  },
+                  {
+                    value: "47,375",
+                  },
+                  {
+                    value: "55,271",
+                  },
+                  {
+                    value: "63,167",
+                  },
+                  {
+                    value: "71,062",
+                  },
+                  {
+                    value: "78,958",
+                  },
+                  {
+                    value: "118,437",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                ],
+              },
+              {
+                name: "SumAssured",
+                values: [
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                ],
+              },
+              {
+                name: "FundValue_4pc",
+                values: [
+                  {
+                    value: "2,952",
+                  },
+                  {
+                    value: "8,817",
+                  },
+                  {
+                    value: "15,685",
+                  },
+                  {
+                    value: "23,183",
+                  },
+                  {
+                    value: "31,336",
+                  },
+                  {
+                    value: "39,760",
+                  },
+                  {
+                    value: "48,870",
+                  },
+                  {
+                    value: "58,283",
+                  },
+                  {
+                    value: "68,011",
+                  },
+                  {
+                    value: "78,064",
+                  },
+                  {
+                    value: "133,642",
+                  },
+                  {
+                    value: "199,376",
+                  },
+                  {
+                    value: "235,709",
+                  },
+                  {
+                    value: "280,147",
+                  },
+                  {
+                    value: "334,091",
+                  },
+                  {
+                    value: "401,156",
+                  },
+                  {
+                    value: "481,855",
+                  },
+                  {
+                    value: "578,706",
+                  },
+                  {
+                    value: "694,916",
+                  },
+                  {
+                    value: "834,283",
+                  },
+                  {
+                    value: "1,001,306",
+                  },
+                  {
+                    value: "1,038,488",
+                  },
+                ],
+              },
+              {
+                name: "DeathBenefit_4pc",
+                values: [
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "401,156",
+                  },
+                  {
+                    value: "481,855",
+                  },
+                  {
+                    value: "578,706",
+                  },
+                  {
+                    value: "694,916",
+                  },
+                  {
+                    value: "834,283",
+                  },
+                  {
+                    value: "1,001,306",
+                  },
+                  {
+                    value: "",
+                  },
+                ],
+              },
+              {
+                name: "FundValue_8pc",
+                values: [
+                  {
+                    value: "3,014",
+                  },
+                  {
+                    value: "9,120",
+                  },
+                  {
+                    value: "16,499",
+                  },
+                  {
+                    value: "24,828",
+                  },
+                  {
+                    value: "34,181",
+                  },
+                  {
+                    value: "44,221",
+                  },
+                  {
+                    value: "55,413",
+                  },
+                  {
+                    value: "67,429",
+                  },
+                  {
+                    value: "80,332",
+                  },
+                  {
+                    value: "94,190",
+                  },
+                  {
+                    value: "180,592",
+                  },
+                  {
+                    value: "304,909",
+                  },
+                  {
+                    value: "440,034",
+                  },
+                  {
+                    value: "638,497",
+                  },
+                  {
+                    value: "926,464",
+                  },
+                  {
+                    value: "1,344,284",
+                  },
+                  {
+                    value: "1,950,493",
+                  },
+                  {
+                    value: "2,830,023",
+                  },
+                  {
+                    value: "4,106,111",
+                  },
+                  {
+                    value: "5,957,518",
+                  },
+                  {
+                    value: "8,643,575",
+                  },
+                  {
+                    value: "9,311,474",
+                  },
+                ],
+              },
+              {
+                name: "DeathBenefit_8pc",
+                values: [
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "350,000",
+                  },
+                  {
+                    value: "440,034",
+                  },
+                  {
+                    value: "638,497",
+                  },
+                  {
+                    value: "926,464",
+                  },
+                  {
+                    value: "1,344,284",
+                  },
+                  {
+                    value: "1,950,493",
+                  },
+                  {
+                    value: "2,830,023",
+                  },
+                  {
+                    value: "4,106,111",
+                  },
+                  {
+                    value: "5,957,518",
+                  },
+                  {
+                    value: "8,643,575",
+                  },
+                  {
+                    value: "",
+                  },
+                ],
+              },
+            ],
+          },
+          SurrenderValue: {
+            size: 22,
+            projections: [
+              {
+                name: "Year",
+                values: [
+                  {
+                    value: "1",
+                  },
+                  {
+                    value: "2",
+                  },
+                  {
+                    value: "3",
+                  },
+                  {
+                    value: "4",
+                  },
+                  {
+                    value: "5",
+                  },
+                  {
+                    value: "6",
+                  },
+                  {
+                    value: "7",
+                  },
+                  {
+                    value: "8",
+                  },
+                  {
+                    value: "9",
+                  },
+                  {
+                    value: "10",
+                  },
+                  {
+                    value: "15",
+                  },
+                  {
+                    value: "20",
+                  },
+                  {
+                    value: "25",
+                  },
+                  {
+                    value: "30",
+                  },
+                  {
+                    value: "35",
+                  },
+                  {
+                    value: "40",
+                  },
+                  {
+                    value: "45",
+                  },
+                  {
+                    value: "50",
+                  },
+                  {
+                    value: "55",
+                  },
+                  {
+                    value: "60",
+                  },
+                  {
+                    value: "65",
+                  },
+                  {
+                    value: "66",
+                  },
+                ],
+              },
+              {
+                name: "Age",
+                values: [
+                  {
+                    value: "34",
+                  },
+                  {
+                    value: "35",
+                  },
+                  {
+                    value: "36",
+                  },
+                  {
+                    value: "37",
+                  },
+                  {
+                    value: "38",
+                  },
+                  {
+                    value: "39",
+                  },
+                  {
+                    value: "40",
+                  },
+                  {
+                    value: "41",
+                  },
+                  {
+                    value: "42",
+                  },
+                  {
+                    value: "43",
+                  },
+                  {
+                    value: "48",
+                  },
+                  {
+                    value: "53",
+                  },
+                  {
+                    value: "58",
+                  },
+                  {
+                    value: "63",
+                  },
+                  {
+                    value: "68",
+                  },
+                  {
+                    value: "73",
+                  },
+                  {
+                    value: "78",
+                  },
+                  {
+                    value: "83",
+                  },
+                  {
+                    value: "88",
+                  },
+                  {
+                    value: "93",
+                  },
+                  {
+                    value: "98",
+                  },
+                  {
+                    value: "99",
+                  },
+                ],
+              },
+              {
+                name: "TotalPremium",
+                values: [
+                  {
+                    value: "7,896",
+                  },
+                  {
+                    value: "15,792",
+                  },
+                  {
+                    value: "23,687",
+                  },
+                  {
+                    value: "31,583",
+                  },
+                  {
+                    value: "39,479",
+                  },
+                  {
+                    value: "47,375",
+                  },
+                  {
+                    value: "55,271",
+                  },
+                  {
+                    value: "63,167",
+                  },
+                  {
+                    value: "71,062",
+                  },
+                  {
+                    value: "78,958",
+                  },
+                  {
+                    value: "118,437",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                  {
+                    value: "157,917",
+                  },
+                ],
+              },
+              {
+                name: "SurrenderValue_4pc",
+                values: [
+                  {
+                    value: "1,476",
+                  },
+                  {
+                    value: "4,408",
+                  },
+                  {
+                    value: "15,685",
+                  },
+                  {
+                    value: "23,183",
+                  },
+                  {
+                    value: "31,336",
+                  },
+                  {
+                    value: "39,760",
+                  },
+                  {
+                    value: "48,870",
+                  },
+                  {
+                    value: "58,283",
+                  },
+                  {
+                    value: "68,011",
+                  },
+                  {
+                    value: "78,064",
+                  },
+                  {
+                    value: "133,642",
+                  },
+                  {
+                    value: "199,376",
+                  },
+                  {
+                    value: "235,709",
+                  },
+                  {
+                    value: "280,147",
+                  },
+                  {
+                    value: "334,091",
+                  },
+                  {
+                    value: "401,156",
+                  },
+                  {
+                    value: "481,855",
+                  },
+                  {
+                    value: "578,706",
+                  },
+                  {
+                    value: "694,916",
+                  },
+                  {
+                    value: "834,283",
+                  },
+                  {
+                    value: "1,001,306",
+                  },
+                  {
+                    value: "1,038,488",
+                  },
+                ],
+              },
+              {
+                name: "SurrenderValue_8pc",
+                values: [
+                  {
+                    value: "1,507",
+                  },
+                  {
+                    value: "4,560",
+                  },
+                  {
+                    value: "16,499",
+                  },
+                  {
+                    value: "24,828",
+                  },
+                  {
+                    value: "34,181",
+                  },
+                  {
+                    value: "44,221",
+                  },
+                  {
+                    value: "55,413",
+                  },
+                  {
+                    value: "67,429",
+                  },
+                  {
+                    value: "80,332",
+                  },
+                  {
+                    value: "94,190",
+                  },
+                  {
+                    value: "180,592",
+                  },
+                  {
+                    value: "304,909",
+                  },
+                  {
+                    value: "440,034",
+                  },
+                  {
+                    value: "638,497",
+                  },
+                  {
+                    value: "926,464",
+                  },
+                  {
+                    value: "1,344,284",
+                  },
+                  {
+                    value: "1,950,493",
+                  },
+                  {
+                    value: "2,830,023",
+                  },
+                  {
+                    value: "4,106,111",
+                  },
+                  {
+                    value: "5,957,518",
+                  },
+                  {
+                    value: "8,643,575",
+                  },
+                  {
+                    value: "9,311,474",
+                  },
+                ],
+              },
+            ],
+          },
+        },
+        premiums: {
+          SumAssured_rider: "250,000",
+          PremiumPaymentTerm: "20",
+          AnnualPremium_rider: "595",
+          Premium_rider: "54",
+          PolicyTerm: "66",
+          PremiumPaymentTerm_rider: "1",
+          PolicyTerm_rider: "1",
+          SumAssured: "350,000",
+          Validation: true,
+          FundValue: "351,950",
+          Premium: "658",
+          ValidationMessage: "",
+        },
+      };
+
+      async function handleClick() {
+        const bvService = new BV360F.BenefitVisualizerWidget();
+        let dataType = document.getElementsByName("data");
+        let product = document.getElementsByName("product");
+        let selectedDataType;
+        for (let i = 0; i < dataType.length; i++) {
+          if (dataType[i].checked) {
+            selectedDataType = dataType[i].value;
+            break;
+          }
+        }
+
+        let selectedProduct;
+        for (let i = 0; i < product.length; i++) {
+          if (product[i].checked) {
+            selectedProduct = product[i].value;
+            break;
+          }
+        }
+
+        if (selectedDataType === "local") {
+          let data = {};
+          let config = {};
+          switch (selectedProduct) {
+            case "AUW":
+              data = dataAUW;
+              config = configAUW;
+              break;
+
+            default:
+              break;
+          }
+
+          bvService.render({
+            selector: "bv-selector",
+            configuration: config,
+            benefitVisualizer: data,
+          });
+        }
+
+        if (selectedDataType === "remote") {
+          let data = {};
+          let config = {};
+          switch (selectedProduct) {
+            case "AUW":
+              data = await bvService.getBenefitVisualizer({
+                endpoint:
+                  "https://api-sandbox.360f.com/benefit-visualizer-backend/api/v1/calculate-bi-data?subscription-key=4ad9c11a19324f4a8a0b7e8ae199bf46",
+                headers: {
+                  "X-TENANT-ID": "f3fcf9f4-4283-4f44-ac52-4b276817f9ee",
+                  "Content-Type": "application/json",
+                  accept: "application/json",
+                },
+                body: {
+                  base: {
+                    Gender: "Female",
+                    CalculationMethod: "SumAssuredToPremium",
+                    AgeAtFinancialGoal: 55,
+                    PlanVersion_rider: "FirstDollar",
+                    SumAssured: 350000,
+                    Premium: 6000,
+                    PremiumPaymentTerm: 20,
+                    Frequency: "Monthly",
+                    CriticalIllness_rider: "Yes",
+                    PlanType_rider: "Plan3",
+                    Age: 33,
+                  },
+                  productCode: "AUWPBV01",
+                  productVersion: "1",
+                  productId: "6a1001a6-52e0-4737-8107-e9b57d4281ce",
+                },
+              });
+              config = await bvService.getChartConfiguration({
+                endpoint:
+                  "https://api-sandbox.360f.com/benefit-visualizer-backend/api/v1/configs?subscription-key=4ad9c11a19324f4a8a0b7e8ae199bf46",
+                headers: {
+                  "X-TENANT-ID": "f3fcf9f4-4283-4f44-ac52-4b276817f9ee",
+                },
+                params: {
+                  productCode: "AUWPBV01",
+                  productVersion: "1",
+                },
+              });
+              break;
+
+            default:
+              break;
+          }
+
+          bvService.render({
+            selector: "bv-selector",
+            configuration: config,
+            benefitVisualizer: data,
+          });
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Display a message if JS has been disabled on the browser. -->
+    <noscript
+      >If you're seeing this message, that means
+      <strong>JavaScript has been disabled on your browser</strong>, please
+      <strong>enable JS</strong> to make this app work.</noscript
+    >
+    <h1>Benefit Visualizer</h1>
+    <input type="radio" id="AUW" name="product" checked value="AUW" />
+    <label for="AUW">AU Wealth Protector - AUWPBV01</label><br />
+    <div>
+      <p>Please select your data type:</p>
+       
+      <input type="radio" id="localData" name="data" value="local" />  
+      <label for="localData">Local data</label><br />
+       
+      <input type="radio" id="remoteData" name="data" value="remote" />
+        <label for="remoteData">Remote data</label><br />
+       
+      <br />
+    </div>
+    <input
+      type="button"
+      value="Generate Benefit Visualizer"
+      onclick="handleClick()"
+    />
+    <!-- The app hooks into this div -->
+    <div id="bv-selector" style="width: 100%"></div>
+  </body>
+</html>
